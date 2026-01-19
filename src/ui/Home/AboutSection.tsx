@@ -27,7 +27,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+   <section id="about" className="py-20 lg:py-32 bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-2 h-2 bg-[#7d4934]/20 rounded-full animate-pulse" />

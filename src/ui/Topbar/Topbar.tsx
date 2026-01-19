@@ -30,6 +30,21 @@ export const Topbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault()
+    const target = document.querySelector(targetId)
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    // Close mobile menu if open
+    if (isOpen) {
+      setIsOpen(false)
+    }
+  }
+
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
       <div className="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4">
@@ -46,6 +61,7 @@ export const Topbar = () => {
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle(), "bg-transparent text-black hover:bg-black/5 hover:text-black border-none px-4 py-2 transition-all duration-200")}
                     href="#home"
+                    onClick={(e) => handleSmoothScroll(e, 'home')}
                   >
                     Home
                   </NavigationMenuLink>
@@ -54,6 +70,7 @@ export const Topbar = () => {
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle(), "bg-transparent text-black hover:bg-black/5 hover:text-black border-none px-4 py-2 transition-all duration-200")}
                     href="#about"
+                    onClick={(e) => handleSmoothScroll(e, 'about')}
                   >
                     About
                   </NavigationMenuLink>
@@ -62,6 +79,7 @@ export const Topbar = () => {
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle(), "bg-transparent text-black hover:bg-black/5 hover:text-black border-none px-4 py-2 transition-all duration-200")}
                     href="#projects"
+                    onClick={(e) => handleSmoothScroll(e, 'projects')}
                   >
                     Projects
                   </NavigationMenuLink>
@@ -70,6 +88,7 @@ export const Topbar = () => {
                   <NavigationMenuLink
                     className={cn(navigationMenuTriggerStyle(), "bg-transparent text-black hover:bg-black/5 hover:text-black border-none px-4 py-2 transition-all duration-200")}
                     href="#contact"
+                    onClick={(e) => handleSmoothScroll(e, 'contact')}
                   >
                     Contact
                   </NavigationMenuLink>
