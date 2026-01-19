@@ -32,7 +32,7 @@ export const Topbar = () => {
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
-    const target = document.querySelector(targetId)
+    const target = document.querySelector('#' + targetId)
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
@@ -73,6 +73,15 @@ export const Topbar = () => {
                     onClick={(e) => handleSmoothScroll(e, 'about')}
                   >
                     About
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={cn(navigationMenuTriggerStyle(), "bg-transparent text-black hover:bg-black/5 hover:text-black border-none px-4 py-2 transition-all duration-200")}
+                    href="#services"
+                    onClick={(e) => handleSmoothScroll(e, 'services')}
+                  >
+                    Services
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>

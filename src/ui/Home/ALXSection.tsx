@@ -57,7 +57,7 @@ const ALXSection: React.FC = () => {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                   <img 
-                    src="/img/Alx.PNG"
+                    src="/Alx.PNG"
                     alt="ALX Professional Certification"
                     className="w-full h-auto object-cover"
                   />

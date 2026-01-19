@@ -114,7 +114,7 @@ const PortfolioShowcase: React.FC = () => {
   };
 
   return (
-    <section className="relative py-20 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 overflow-hidden">
+    <section className="relative py-20 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 overflow-hidden" id="projects">
       
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">

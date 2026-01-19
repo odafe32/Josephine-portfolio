@@ -45,7 +45,7 @@ const HeroSection = () => {
 
       <section 
         ref={heroRef}
-        className="relative min-h-screen overflow-hidden"
+        className="relative min-h-screen overflow-hidden" id="home"
       >
         {/* Enhanced Background with Static Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-white via-amber-50/20 to-orange-50/30" />
